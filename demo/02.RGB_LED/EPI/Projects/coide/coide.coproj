@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G" name="coide">
+  <Target name="coide" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="310" chipName="STM32F103RB" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="STM32F103RB"/>
+          <Define name="STM32F10X_MD"/>
+          <Define name="gcc"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="Library" value="Use base C Library"/>
+        <LinkedLibraries>
+          <Libset dir="c:\program files\gnu tools arm embedded\4.7 2013q1\arm-none-eabi\lib\armv7-m\" libs="m"/>
+        </LinkedLibraries>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00020000" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00005000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="c:/coocox/coide_1.7.2final/configuration/programdata/coide/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="coide"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="J-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value="C:\Program Files\SEGGER\JLinkARM_V472\JLinkGDBServerCL.exe"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2331"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="STM32F10x_MD_128.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./"/>
+  <Files>
+    <File name="driver/Sensor_Shield.h" path="../../Drivers/SensorShield/Sensor_Shield.h" type="1"/>
+    <File name="coxlib/src/xuart.c" path="../../../../../lib/libcox/xuart.c" type="1"/>
+    <File name="coxlib/inc/xdma.h" path="../../../../../lib/libcox/xdma.h" type="1"/>
+    <File name="app" path="" type="2"/>
+    <File name="app/Interface.h" path="../../Apps/Interface.h" type="1"/>
+    <File name="coxlib/src/xwdt.c" path="../../../../../lib/libcox/xwdt.c" type="1"/>
+    <File name="driver/ADXL345.c" path="../../Drivers/DigitalAccelerometer/ADXL345.c" type="1"/>
+    <File name="coxlib/inc/xgpio.h" path="../../../../../lib/libcox/xgpio.h" type="1"/>
+    <File name="cookie/cookie_cfg.h" path="../../../../../lib/libcookie/cookie_cfg.h" type="1"/>
+    <File name="comport/UART_Channel.h" path="../../ComPort/UART_Channel.h" type="1"/>
+    <File name="coxlib/src/xpwm.c" path="../../../../../lib/libcox/xpwm.c" type="1"/>
+    <File name="coxlib/inc/xsysctl.h" path="../../../../../lib/libcox/xsysctl.h" type="1"/>
+    <File name="comport/I2C_Channel.c" path="../../ComPort/I2C_Channel.c" type="1"/>
+    <File name="app/Interface.c" path="../../Apps/Interface.c" type="1"/>
+    <File name="utils/DebugIO.h" path="../../Utils/DebugIO.h" type="1"/>
+    <File name="coxlib/src/xadc.c" path="../../../../../lib/libcox/xadc.c" type="1"/>
+    <File name="coxlib/inc/xtimer.h" path="../../../../../lib/libcox/xtimer.h" type="1"/>
+    <File name="driver/HMC5883L.h" path="../../Drivers/DigitalCompass/HMC5883L.h" type="1"/>
+    <File name="app/DriverCfg.h" path="../../Apps/DriverCfg.h" type="1"/>
+    <File name="utils/ringbuf.c" path="../../Utils/ringbuf.c" type="1"/>
+    <File name="coxlib/inc/xacmp.h" path="../../../../../lib/libcox/xacmp.h" type="1"/>
+    <File name="coxlib/inc/xi2c.h" path="../../../../../lib/libcox/xi2c.h" type="1"/>
+    <File name="coxlib/inc/xhw_nvic.h" path="../../../../../lib/libcox/xhw_nvic.h" type="1"/>
+    <File name="coxlib/inc/xhw_wdt.h" path="../../../../../lib/libcox/xhw_wdt.h" type="1"/>
+    <File name="comport/UART_Channel.c" path="../../ComPort/UART_Channel.c" type="1"/>
+    <File name="coxlib/src/xgpio.c" path="../../../../../lib/libcox/xgpio.c" type="1"/>
+    <File name="coxlib/inc" path="" type="2"/>
+    <File name="comport/PortCfg.h" path="../../ComPort/PortCfg.h" type="1"/>
+    <File name="coxlib/src/xi2c.c" path="../../../../../lib/libcox/xi2c.c" type="1"/>
+    <File name="driver/HC_SR04.c" path="../../Drivers/UltraSonic/HC_SR04.c" type="1"/>
+    <File name="coxlib/inc/xwdt.h" path="../../../../../lib/libcox/xwdt.h" type="1"/>
+    <File name="driver/rgb.h" path="../../Drivers/RGBLed/rgb.h" type="1"/>
+    <File name="driver" path="" type="2"/>
+    <File name="coxlib/inc/xhw_spi.h" path="../../../../../lib/libcox/xhw_spi.h" type="1"/>
+    <File name="coxlib/inc/xuart.h" path="../../../../../lib/libcox/xuart.h" type="1"/>
+    <File name="coxlib/inc/xhw_rtc.h" path="../../../../../lib/libcox/xhw_rtc.h" type="1"/>
+    <File name="coxlib/inc/xhw_types.h" path="../../../../../lib/libcox/xhw_types.h" type="1"/>
+    <File name="driver/ArduinoMotorShield.c" path="../../Drivers/ArduinoMotorShield/ArduinoMotorShield.c" type="1"/>
+    <File name="coxlib/inc/xdebug.h" path="../../../../../lib/libcox/xdebug.h" type="1"/>
+    <File name="startup" path="" type="2"/>
+    <File name="coxlib/inc/xcore.h" path="../../../../../lib/libcox/xcore.h" type="1"/>
+    <File name="coxlib/inc/xhw_ints.h" path="../../../../../lib/libcox/xhw_ints.h" type="1"/>
+    <File name="framework" path="" type="2"/>
+    <File name="coxlib/inc/xhw_sysctl.h" path="../../../../../lib/libcox/xhw_sysctl.h" type="1"/>
+    <File name="coxlib/src/xtimer.c" path="../../../../../lib/libcox/xtimer.c" type="1"/>
+    <File name="coxlib/src/xsysctl.c" path="../../../../../lib/libcox/xsysctl.c" type="1"/>
+    <File name="coxlib/inc/xspi.h" path="../../../../../lib/libcox/xspi.h" type="1"/>
+    <File name="startup/startup_coide.c" path="../../../../../lib/startup/src/startup_coide.c" type="1"/>
+    <File name="comport/SPI_Channel.h" path="../../ComPort/SPI_Channel.h" type="1"/>
+    <File name="coxlib/inc/xhw_config.h" path="../../../../../lib/libcox/xhw_config.h" type="1"/>
+    <File name="coxlib/inc/xpwm.h" path="../../../../../lib/libcox/xpwm.h" type="1"/>
+    <File name="driver/ServoMotor.h" path="../../Drivers/ServoMotor/ServoMotor.h" type="1"/>
+    <File name="coxlib/inc/xhw_memmap.h" path="../../../../../lib/libcox/xhw_memmap.h" type="1"/>
+    <File name="coxlib/src/xcore.c" path="../../../../../lib/libcox/xcore.c" type="1"/>
+    <File name="coxlib/inc/xhw_uart.h" path="../../../../../lib/libcox/xhw_uart.h" type="1"/>
+    <File name="driver/ADXL345.h" path="../../Drivers/DigitalAccelerometer/ADXL345.h" type="1"/>
+    <File name="coxlib/inc/xrtc.h" path="../../../../../lib/libcox/xrtc.h" type="1"/>
+    <File name="comport" path="" type="2"/>
+    <File name="coxlib/src" path="" type="2"/>
+    <File name="coxlib" path="" type="2"/>
+    <File name="coxlib/src/xspi.c" path="../../../../../lib/libcox/xspi.c" type="1"/>
+    <File name="coxlib/inc/xadc.h" path="../../../../../lib/libcox/xadc.h" type="1"/>
+    <File name="driver/HC_SR04.h" path="../../Drivers/UltraSonic/HC_SR04.h" type="1"/>
+    <File name="driver/hw_ADXL345.h" path="../../Drivers/DigitalAccelerometer/hw_ADXL345.h" type="1"/>
+    <File name="coxlib/inc/xhw_gpio.h" path="../../../../../lib/libcox/xhw_gpio.h" type="1"/>
+    <File name="driver/ServoMotor.c" path="../../Drivers/ServoMotor/ServoMotor.c" type="1"/>
+    <File name="driver/ArduinoMotorShield.h" path="../../Drivers/ArduinoMotorShield/ArduinoMotorShield.h" type="1"/>
+    <File name="utils" path="" type="2"/>
+    <File name="driver/hw_HMC5883L.h" path="../../Drivers/DigitalCompass/hw_HMC5883L.h" type="1"/>
+    <File name="cookie/cookie.h" path="../../../../../lib/libcookie/cookie.h" type="1"/>
+    <File name="comport/SPI_Channel.c" path="../../ComPort/SPI_Channel.c" type="1"/>
+    <File name="driver/Sensor_Shield.c" path="../../Drivers/SensorShield/Sensor_Shield.c" type="1"/>
+    <File name="coxlib/inc/xhw_adc.h" path="../../../../../lib/libcox/xhw_adc.h" type="1"/>
+    <File name="driver/rgb.c" path="../../Drivers/RGBLed/rgb.c" type="1"/>
+    <File name="coxlib/src/xdma.c" path="../../../../../lib/libcox/xdma.c" type="1"/>
+    <File name="utils/DebugIO.c" path="../../Utils/DebugIO.c" type="1"/>
+    <File name="utils/ringbuf.h" path="../../Utils/ringbuf.h" type="1"/>
+    <File name="coxlib/src/xrtc.c" path="../../../../../lib/libcox/xrtc.c" type="1"/>
+    <File name="driver/HMC5883L.c" path="../../Drivers/DigitalCompass/HMC5883L.c" type="1"/>
+    <File name="cookie" path="" type="2"/>
+    <File name="coxlib/src/xdebug.c" path="../../../../../lib/libcox/xdebug.c" type="1"/>
+    <File name="comport/I2C_Channel.h" path="../../ComPort/I2C_Channel.h" type="1"/>
+    <File name="coxlib/inc/xhw_timer.h" path="../../../../../lib/libcox/xhw_timer.h" type="1"/>
+    <File name="coxlib/inc/xhw_i2c.h" path="../../../../../lib/libcox/xhw_i2c.h" type="1"/>
+    <File name="coxlib/inc/xhw_dma.h" path="../../../../../lib/libcox/xhw_dma.h" type="1"/>
+    <File name="framework/Frame.c" path="../../Framework/Frame.c" type="1"/>
+  </Files>
+</Project>
