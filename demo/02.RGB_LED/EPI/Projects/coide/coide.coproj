@@ -78,10 +78,10 @@
     <File name="cookie/cookie_cfg.h" path="../../../../../lib/libcookie/cookie_cfg.h" type="1"/>
     <File name="comport/UART_Channel.h" path="../../ComPort/UART_Channel.h" type="1"/>
     <File name="coxlib/src/xpwm.c" path="../../../../../lib/libcox/xpwm.c" type="1"/>
-    <File name="coxlib/inc/xsysctl.h" path="../../../../../lib/libcox/xsysctl.h" type="1"/>
-    <File name="comport/I2C_Channel.c" path="../../ComPort/I2C_Channel.c" type="1"/>
-    <File name="app/Interface.c" path="../../Apps/Interface.c" type="1"/>
     <File name="utils/DebugIO.h" path="../../Utils/DebugIO.h" type="1"/>
+    <File name="coxlib/inc/xsysctl.h" path="../../../../../lib/libcox/xsysctl.h" type="1"/>
+    <File name="app/Interface.c" path="../../Apps/Interface.c" type="1"/>
+    <File name="comport/I2C_Channel.c" path="../../ComPort/I2C_Channel.c" type="1"/>
     <File name="coxlib/src/xadc.c" path="../../../../../lib/libcox/xadc.c" type="1"/>
     <File name="coxlib/inc/xtimer.h" path="../../../../../lib/libcox/xtimer.h" type="1"/>
     <File name="driver/HMC5883L.h" path="../../Drivers/DigitalCompass/HMC5883L.h" type="1"/>
@@ -98,8 +98,8 @@
     <File name="coxlib/src/xi2c.c" path="../../../../../lib/libcox/xi2c.c" type="1"/>
     <File name="driver/HC_SR04.c" path="../../Drivers/UltraSonic/HC_SR04.c" type="1"/>
     <File name="coxlib/inc/xwdt.h" path="../../../../../lib/libcox/xwdt.h" type="1"/>
-    <File name="driver/rgb.h" path="../../Drivers/RGBLed/rgb.h" type="1"/>
     <File name="driver" path="" type="2"/>
+    <File name="driver/rgb.h" path="../../Drivers/RGBLed/rgb.h" type="1"/>
     <File name="coxlib/inc/xhw_spi.h" path="../../../../../lib/libcox/xhw_spi.h" type="1"/>
     <File name="coxlib/inc/xuart.h" path="../../../../../lib/libcox/xuart.h" type="1"/>
     <File name="coxlib/inc/xhw_rtc.h" path="../../../../../lib/libcox/xhw_rtc.h" type="1"/>

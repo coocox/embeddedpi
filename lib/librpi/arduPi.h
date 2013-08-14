@@ -451,11 +451,21 @@ class SPIPi{
  		void transfernb(char* tbuf, char* rbuf, uint32_t len);
 };
 
+class ADPi{
+	private:
+		int TransReceProcess(unsigned char channel, int *length, char *buf);
+	public:
+		ADPi();
+		void begin();
+		int GetValue(unsigned char channel);
+};
+
 /* Some useful arduino functions */
 void pinMode(int pin, Pinmode mode);
 void digitalWrite(int pin, int value);
 int digitalRead(int pin);
 int analogRead (int pin);
+void analogWrite(int pin, int val);
 void delay(long millis);
 void delayMicroseconds(long micros);
 uint8_t shiftIn  (uint8_t dPin, uint8_t cPin, bcm2835SPIBitOrder order);

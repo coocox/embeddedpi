@@ -1343,6 +1343,23 @@ int address;
 	value = value * 1023 / 4095;  //mapping the value between 0 and 1023
 	return value;
 }
+//Parameters 
+//pin: the pin to write to.
+//value: the duty cycle: between 0 (always off) and 255 (always on).
+//Returns nothing
+void analogWrite(int pin, int val)
+{
+    Serial.begin(115200);
+	delay(5);
+	pinMode(pin, INPUT);
+	Serial.write(0xa5);
+	Serial.write(0x40);
+	Serial.write(0x06);
+	Serial.write(pin);
+	Serial.write(0x01);
+	Serial.write(val);
+	Serial.write(0x5a);
+}
 
 void attachInterrupt(int p,void (*f)(), Digivalue m){
 	int GPIOPin = raspberryPinNumber(p);
